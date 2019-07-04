@@ -36,15 +36,19 @@ vue后台：https://gitee.com/gz-yami/mall4v
 
 ## 相关截图
 
-![登陆](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/login.png)
+![首页](https://gitee.com/gz-yami/mall4m/raw/master/screenshot/index.jpg)
 
-![订单](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/order.png)
+![商品详情](https://gitee.com/gz-yami/mall4m/raw/master/screenshot/prodInfo.jpg)
 
-![商品列表](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/prodList.png)
+![购物车](https://gitee.com/gz-yami/mall4m/raw/master/screenshot/shopCart.jpg)
 
-![sku](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/sku.png)
+![sku](https://gitee.com/gz-yami/mall4m/raw/master/screenshot/sku.jpg)
 
-![运费模板](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/transport.png)
+![我的](https://gitee.com/gz-yami/mall4m/raw/master/screenshot/my.jpg)
+
+
+
+
 
 
 
