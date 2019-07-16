@@ -16,7 +16,7 @@
 
 java后台：https://gitee.com/gz-yami/mall4j
 
-vue后台：https://gitee.com/gz-yami/mall4v
+vue中后台：https://gitee.com/gz-yami/mall4v
 
 小程序：https://gitee.com/gz-yami/mall4m
 
