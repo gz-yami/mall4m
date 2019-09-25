@@ -156,6 +156,9 @@ Page({
       show = true;
       t = 0;
     }
+    this.setData({
+      show: true
+    });
     // this.animation.translate(arr[0], arr[1]).step();
     this.animationEvents(this, moveY, show);
 
@@ -183,8 +186,7 @@ Page({
     that.animation.translateY(moveY + 'vh').step()
 
     that.setData({
-      animation: that.animation.export(),
-      show: show
+      animation: that.animation.export()
     })
 
   },

@@ -14,7 +14,7 @@
     <view class="section" bindtap="translate">
       <text>所在地区</text>
       <view class="pca">{{province}} {{city}} {{area}}</view>
-      <view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" bindtap="hiddenFloatView">
+      <view class="animation-element-wrapper" animation="{{animation}}" style="visibility:{{show ? 'visible':'hidden'}}" catchtap="hiddenFloatView">
         <view class="animation-element" catchtap="nono">
           <text class="right-bt" catchtap="hiddenFloatView">确定</text>
           <view class="line"></view>
