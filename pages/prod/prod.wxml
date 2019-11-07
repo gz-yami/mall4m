@@ -97,7 +97,7 @@
   </view>
   <!-- end 商品详情 -->
   <!-- 底部按钮 -->
-  <view class="cart-footer">
+  <view class="cart-footer {{findSku?'':'gray'}}">
     <view class="btn icon" bindtap='toHomePage'>
       <image src="../../images/tabbar/homepage.png"></image>
       首页
@@ -136,10 +136,11 @@
     <view class="pup-sku-main">
       <view class='pup-sku-header'>
         <image class="pup-sku-img" src="{{defaultSku.pic?defaultSku.pic:pic}}"></image>
-        <view class="pup-sku-price">
+        <view class="pup-sku-price" wx-if="{{findSku}}">
           ￥
           <text class="pup-sku-price-int">{{wxs.parsePrice(defaultSku.price)[0]}}</text> .{{wxs.parsePrice(defaultSku.price)[1]}}
         </view>
+        <view class="pup-sku-price" wx-if="{{!findSku}}">无货</view>
         <view class='pup-sku-prop'>
           <text>已选</text> {{selectedProp.length>0?selectedProp+'，':selectedProp}}{{prodNum}}件
         </view>
@@ -151,7 +152,7 @@
             <view class='sku-kind'>{{key}}</view>
             <view class='sku-choose'>
               <block wx:for="{{value}}" wx:key='*this'>
-                <text class="sku-choose-item {{wxs.array_contain(selectedProp,item)?'active':''}} {{wxs.props_contain(allProperties,selectedPropObj,key,item,propKeys)?'':'gray'}}" data-ok="{{wxs.props_contain(allProperties,selectedPropObj,key,item,propKeys)}}" bindtap='toChooseItem'
+                <text class="sku-choose-item {{wxs.array_contain(selectedProp,item)?'active':''}} {{['dashed',''][wxs.props_contain(allProperties,selectedPropObj,key,item,propKeys)]}}" bindtap='toChooseItem'
                   data-key="{{key}}" data-val="{{item}}">{{item}}</text>
               </block>
             </view>
@@ -173,7 +174,7 @@
           <view class="count-name">数量</view>
         </view>
       </view>
-      <view class='pup-sku-footer'>
+      <view class='pup-sku-footer {{findSku?"":"gray"}}'>
         <view class="btn cart" bindtap='addToCart'>加入购物车</view>
         <view class="btn buy" bindtap='buyNow'>立即购买</view>
       </view>

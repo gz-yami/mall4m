@@ -558,6 +558,10 @@ img {
   color: #fff;
 }
 
+.cart-footer.gray .btn.cart, .cart-footer.gray .btn.buy{
+  background: #ddd;
+}
+
 .cart-footer .btn .badge {
   position: absolute;
   top: 20rpx;
@@ -748,16 +752,18 @@ img {
   color: #333;
   background-color: #f7f7f7;
   font-size: 14px;
+  border:1px solid #aaa;
 }
 
 .sku-choose-item.active {
   background-color: #eb2444;
+  border:1px solid #eb2444 !important;
   color: #fff;
 }
 
-.sku-choose-item.gray {
-  background-color: #f9f9f9;
-  color: #ddd;
+
+.sku-choose-item.dashed {
+  border:1px dashed #aaa;
 }
 
 .pup-sku-count {
@@ -876,3 +882,8 @@ img {
   background: #eb2444;
   color: #fff;
 }
+
+.pup-sku-footer.gray .btn.cart, .pup-sku-footer.gray .btn.buy{
+  background: #ddd;
+}
+

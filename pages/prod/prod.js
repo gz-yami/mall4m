@@ -36,6 +36,7 @@ Page({
     couponList: [],
     skuList: [],
     skuGroup: {},
+    findSku: true,
     defaultSku: undefined,
     selectedProp: [],
     selectedPropObj: {},
@@ -234,37 +235,47 @@ Page({
       }
     })
   },
-  //根据sku的属性 分组
+
+  /**
+   * 根据skuList进行数据组装
+   */
   groupSkuProp: function() {
     var skuList = this.data.skuList;
+
+    //当后台返回只有一个SKU时，且SKU属性值为空时，即该商品没有规格选项，该SKU直接作为默认选中SKU
     if (skuList.length == 1 && skuList[0].properties == "") {
       this.setData({
         defaultSku: skuList[0]
       });
       return;
     }
-    var skuGroup = {};
-    var allProperties = [];
-    var propKeys = [];
+
+    var skuGroup = {};//所有的规格名(包含规格名下的规格值集合）对象，如 {"颜色"：["金色","银色"],"内存"：["64G","256G"]}
+    var allProperties = [];//所有SKU的属性值集合，如 ["颜色:金色;内存:64GB","颜色:银色;内存:64GB"]
+    var propKeys = [];//所有的规格名集合，如 ["颜色","内存"]
+
     for (var i = 0; i < skuList.length; i++) {
+
+      //找到和商品价格一样的那个SKU，作为默认选中的SKU
       var defaultSku = this.data.defaultSku;
       var isDefault = false;
-      if (!defaultSku && skuList[i].price == this.data.price) { //找到和商品价格一样的那个SKU，作为默认选中的SKU
+      if (!defaultSku && skuList[i].price == this.data.price) { 
         defaultSku = skuList[i];
         isDefault = true;
         this.setData({
           defaultSku: defaultSku
         });
       }
-      var properties = skuList[i].properties; //版本:公开版;颜色:金色;内存:64GB
+
+      var properties = skuList[i].properties; //如：版本:公开版;颜色:金色;内存:64GB
       allProperties.push(properties);
-      var propList = properties.split(";"); // ["版本:公开版","颜色:金色","内存:64GB"]
+      var propList = properties.split(";"); // 如：["版本:公开版","颜色:金色","内存:64GB"]
 
       var selectedPropObj = this.data.selectedPropObj;
       for (var j = 0; j < propList.length; j++) {
 
-        var propval = propList[j].split(":"); //["版本","公开版"]
-        var props = skuGroup[propval[0]]; //先取出 版本对应的值数组
+        var propval = propList[j].split(":"); //如 ["版本","公开版"]
+        var props = skuGroup[propval[0]]; //先取出 规格名 对应的规格值数组
 
         //如果当前是默认选中的sku，把对应的属性值 组装到selectedProp
         if (isDefault) {
@@ -304,27 +315,27 @@ Page({
       selectedProperties += key + ":" + selectedPropObj[key] + ";";
     }
     selectedProperties = selectedProperties.substring(0, selectedProperties.length - 1);
-    // console.log(selectedProperties);
     this.setData({
       selectedProp: selectedProp
     });
 
+    var findSku = false;
     for (var i = 0; i < this.data.skuList.length; i++) {
       if (this.data.skuList[i].properties == selectedProperties) {
+        findSku = true;
         this.setData({
-          defaultSku: this.data.skuList[i]
+          defaultSku: this.data.skuList[i],
         });
         break;
       }
     }
+    this.setData({
+      findSku: findSku
+    });
   },
 
   //点击选择规格
   toChooseItem: function(e) {
-    var ok = e.currentTarget.dataset.ok;
-    if (!ok) {
-      return;
-    }
     var val = e.currentTarget.dataset.val;
     var key = e.currentTarget.dataset.key;
     var selectedPropObj = this.data.selectedPropObj;
@@ -417,6 +428,9 @@ Page({
    * 加入购物车
    */
   addToCart: function(event) {
+    if (!this.data.findSku) {
+      return;
+    }
     var ths = this;
     wx.showLoading({
       mask: true
@@ -450,6 +464,9 @@ Page({
    * 立即购买
    */
   buyNow: function() {
+    if (!this.data.findSku) {
+      return;
+    }
     wx.setStorageSync("orderItem", JSON.stringify({
       prodId: this.data.prodId,
       skuId: this.data.defaultSku.skuId,

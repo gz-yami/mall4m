@@ -13,6 +13,9 @@ function parsePrice(val){
   return val.toFixed(2).split(".");
 }
 
+/**
+ * 判断字符串数组是否包含某字符串
+ */
 function array_contain(array, obj) {
   for (var i = 0; i < array.length; i++) {
     if (array[i] == obj)//如果要求数据类型也一致，这里可使用恒等号===
@@ -21,22 +24,31 @@ function array_contain(array, obj) {
   return false;
 }
 
-//判断当前的规格值 是否可以选，即其他
-function props_contain(allProperties, selectedPropObj, key, item, propKeys){
+/**
+ * 当前规格值是否可以选择  
+ * 
+ * 参数说明：
+ * @param allProperties  ['颜色:金色;内存:64GB','颜色:金色;内存:256GB']
+ * @param selectedPropObj {'颜色':'金色','内存':'64GB'}
+ * @param propKeys ['颜色','内存']
+ * @param key 颜色
+ * @param item 金色
+ * 
+ * @return 0 可选但跟其他值不匹配  1 可选 
+ */
+function props_contain(allProperties, selectedPropObj, key, item, propKeys) {
   var properties = "";
   selectedPropObj[key] = item;
-  for (var j = 0; j < propKeys.length; j++){
+  for (var j = 0; j < propKeys.length; j++) {
     properties += propKeys[j] + ":" + selectedPropObj[propKeys[j]] + ";";
   }
   properties = properties.substring(0, properties.length - 1);
-  var find = false;
-  for (var i = 0; i < allProperties.length; i++){
-    if (properties == allProperties[i]){
-      find = true;
-      break;
+  for (var i = 0; i < allProperties.length; i++) {
+    if (properties == allProperties[i]) {
+      return 1;
     }
   }
-  return find;
+  return 0;
 }
 
 function parseDiscount(discountRule){
