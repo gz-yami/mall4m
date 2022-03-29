@@ -17,7 +17,7 @@ Page({
     productTotalAmount: '',
     transfee: '',
     reduceAmount: '',
-    actualTotal: '',
+    shopId: '',
     prodid: ''
   },
 
@@ -27,6 +27,44 @@ Page({
     wx.navigateTo({
       url: '/pages/prod/prod?prodid=' + prodid,
     })
+  },
+
+  /**
+   * 加入购物车
+   */
+  addToCart: function(event) {
+    let index = event.currentTarget.dataset.index
+    // if (!this.orderItemDtos) {
+    //   console.log(1213)
+    //   return;
+    // }
+    var ths = this;
+    wx.showLoading({
+      mask: true
+    });
+    var params = {
+      url: "/p/shopCart/changeItem",
+      method: "POST",
+      data: {
+        basketId: 0,
+        count: this.data.orderItemDtos[index].prodCount,
+        prodId: this.data.orderItemDtos[index].prodId,
+        shopId: this.data.shopId,
+        skuId: this.data.orderItemDtos[index].skuId
+      },
+      callBack: function(res) {
+        //console.log(res);
+        wx.hideLoading();
+        wx.showToast({
+          title: "加入购物车成功",
+          icon: "none"
+        })
+        wx.switchTab({
+          url: '/pages/basket/basket',
+        })
+      }
+    };
+    http.request(params);
   },
 
   /**
@@ -62,6 +100,7 @@ Page({
           transfee: res.transfee,
           reduceAmount: res.reduceAmount,
           actualTotal: res.actualTotal,
+          shopId: res.shopId
         });
         wx.hideLoading();
       }
