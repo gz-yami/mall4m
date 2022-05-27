@@ -59,11 +59,10 @@ vue中后台：https://gitee.com/gz-yami/mall4v
 ## 提交反馈
 
 提问之前，请先阅读[提问的智慧](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/master/README-zh_CN.md)：
+- Mall4j官网 https://www.mall4j.com
+- Mall4j官方技术QQ群：722835385（3000人群）
+- 如需购买商业版源码，请联系商务微信
 
-- QQ群：722835385
+- ![输入图片说明](https://19838323.s21i.faiusr.com/4/4/ABUIABAEGAAgksmNlAYojomK2gIwrAI4rAI!160x160.png)
 
-  ![QQ群](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/qqGroup.png)
-
-- 论坛：<http://bbs.mall4j.com>
-
-- 商务邮箱：yamitech@163.com
+## 更多信息请查看官网 <https://www.mall4j.com>
