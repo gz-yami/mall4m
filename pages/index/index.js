@@ -71,6 +71,14 @@ Page({
     })
   },
 
+  //跳转限时特惠页面
+  toLimitedTimeOffer: function(e) {
+    wx.showToast({
+      icon:"none",
+      title: '该功能未开源'
+    })
+  },
+
   //跳转公告列表页面
   onNewsPage: function() {
     wx.navigateTo({
