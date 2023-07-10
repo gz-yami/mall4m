@@ -16,9 +16,8 @@
         </view>
       </view>
     </view>
-    <view class="deliveryDetail">
+    <view class="deliveryDetail" wx:if="{{dvyData.length}}">
       <block wx:for="{{dvyData}}" wx:key=''>
-        
         <view class="detailItem {{index==0?'lastest':''}}" >
           <view class="dot">
             <image src='../../images/icon/delive-dot.png' ></image>
@@ -31,5 +30,8 @@
         </view>
       </block>
     </view>
+    <view class="empty-space" wx:else>
+          暂无配送信息
+        </view>
   </view>
 </view>
