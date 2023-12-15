@@ -1,4 +1,4 @@
- **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5，而且uniapp可以用vue3语法进行开发更加通用，所以我们更推荐使用uniapp打包成微信小程序。可以见uniapp的项目：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
+ **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
 
 
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0711/174845_6db7724e_5094767.png "商城.png")
