@@ -1,7 +1,6 @@
- **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
-
-
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0711/174845_6db7724e_5094767.png "商城.png")
+
+ **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
 
 Mall4j开源商城，一个基于spring boot、spring oauth2.0、mybatis、redis的轻量级、前后端分离、防范xss攻击、拥有分布式锁，为生产环境多实例完全准备，数据库为b2b2c设计，拥有完整sku和下单流程的开源商城
 
