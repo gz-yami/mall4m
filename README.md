@@ -1,7 +1,7 @@
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0711/174845_6db7724e_5094767.png "商城.png")
 
 
-** 后台使用springboot3开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：https://gitee.com/gz-yami/mall4j 
+## 后台使用springboot3开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：https://gitee.com/gz-yami/mall4j 
 
 
  **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
