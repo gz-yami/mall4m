@@ -1,10 +1,10 @@
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0711/174845_6db7724e_5094767.png "商城.png")
 
 
-## 后台使用springboot3开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：https://gitee.com/gz-yami/mall4j 
+## 后台使用springboot3开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：[https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j) 
 
 
- **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：https://gitee.com/gz-yami/mall4uni 。当然本项目也是可以运行的** 
+ **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：[https://gitee.com/gz-yami/mall4uni](https://gitee.com/gz-yami/mall4uni) 。当然本项目也是可以运行的** 
 
 Mall4j开源商城，一个基于spring boot、spring oauth2.0、mybatis、redis的轻量级、前后端分离、防范xss攻击、拥有分布式锁，为生产环境多实例完全准备，数据库为b2b2c设计，拥有完整sku和下单流程的开源商城
 
@@ -18,11 +18,11 @@ Mall4j开源商城，一个基于spring boot、spring oauth2.0、mybatis、redis
 
 这代码有没有文档呀？ 当然有啦，你已经下载了，在doc这个文件夹上，实在不知道，我就给链接出来咯：
 
-gitee：https://gitee.com/gz-yami/mall4j/tree/master/doc
+gitee：[ttps://gitee.com/gz-yami/mall4j/tree/master/doc](ttps://gitee.com/gz-yami/mall4j/tree/master/doc)
 
-看云：https://www.kancloud.cn/yami/mall4j
+看云：[https://www.kancloud.cn/yami/mall4j](https://www.kancloud.cn/yami/mall4j)
 
-**开发环境搭建视频（推荐先看下文档再看视频）：https://www.bilibili.com/video/BV1eW4y1V7c1** 
+**开发环境搭建视频（推荐先看下文档再看视频）：[https://www.bilibili.com/video/BV1eW4y1V7c1](https://www.bilibili.com/video/BV1eW4y1V7c1)** 
 
 有声音了。如果视频对你有用，记得点赞投币噢。
 
@@ -30,19 +30,19 @@ gitee：https://gitee.com/gz-yami/mall4j/tree/master/doc
 
 除了开源版本，我们商业版有B2C商城、B2B2C商城、O2O商城、S2B2C商城、SAAS商城，多端呈现：小程序 + PC + H5 + APP，更多详情请查看官网 
 
-Mall4j商城官网 https://www.mall4j.com
+Mall4j商城官网 [https://www.mall4j.com](https://www.mall4j.com)
 
 Mall4j商城开源版 使用 AGPLv3 开源，请遵守 AGPLv3 的相关条款，或者联系作者获取商业授权(https://www.mall4j.com)
 
 ## 项目链接
 
-java后台：https://gitee.com/gz-yami/mall4j
+java后台：[https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j)
 
-vue后台前端：https://gitee.com/gz-yami/mall4v
+vue后台前端：[https://gitee.com/gz-yami/mall4v](https://gitee.com/gz-yami/mall4v)
 
-小程序：https://gitee.com/gz-yami/mall4m
+小程序：[https://gitee.com/gz-yami/mall4m](https://gitee.com/gz-yami/mall4m)
 
-uni-app：https://gitee.com/gz-yami/mall4uni
+uni-app：[https://gitee.com/gz-yami/mall4uni](https://gitee.com/gz-yami/mall4uni)
 
 
 
@@ -51,9 +51,9 @@ uni-app：https://gitee.com/gz-yami/mall4uni
 ps: 如果你不清楚如何启动我们的商城，请仔细阅wiki当中的文档
 
 
-https://gitee.com/gz-yami/mall4j/wikis
+[https://gitee.com/gz-yami/mall4j/wikis](https://gitee.com/gz-yami/mall4j/wikis)
 
-**开发环境搭建视频（推荐先看下文档再看视频）：https://www.bilibili.com/video/BV1eW4y1V7c1** 
+**开发环境搭建视频（推荐先看下文档再看视频）：[https://www.bilibili.com/video/BV1eW4y1V7c1](https://www.bilibili.com/video/BV1eW4y1V7c1)** 
 
 有声音了。如果视频对你有用，记得点赞投币噢。
 
@@ -81,11 +81,11 @@ https://gitee.com/gz-yami/mall4j/wikis
 
 ## 提交反馈
 
-- Mall4j官网 https://www.mall4j.com
+- Mall4j官网 [https://www.mall4j.com](https://www.mall4j.com)
 - Mall4j官方技术QQ 1群：722835385（3000人群已满）
 - Mall4j官方技术QQ 2群：729888395
 - 如需购买商业版源码，请联系商务微信
 
 - ![输入图片说明](screenshot/%E5%95%86%E5%8A%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 
-## 更多信息请查看官网 <https://www.mall4j.com>
+## 更多信息请查看官网 <[https://www.mall4j.com](https://www.mall4j.com)>
