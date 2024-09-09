@@ -86,6 +86,6 @@ ps: 如果你不清楚如何启动我们的商城，请仔细阅wiki当中的文
 - Mall4j官方技术QQ 2群：729888395
 - 如需购买商业版源码，请联系商务微信
 
-- ![输入图片说明](screenshot/%E5%95%86%E5%8A%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
+- ![输入图片说明](https://gitee.com/gz-yami/mall4j/raw/master/screenshot/%E5%95%86%E5%8A%A1%E4%BA%8C%E7%BB%B4%E7%A0%81.png)
 
 ## 更多信息请查看官网 <[https://www.mall4j.com](https://www.mall4j.com)>
