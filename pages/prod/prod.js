@@ -63,10 +63,6 @@ Page({
 
     // 加载商品信息
     this.getProdInfo();
-    // 加载评论数据
-    this.getProdCommData();
-    // 加载评论项
-    this.getLittleProdComm();
     // 查看用户是否关注
     this.getCollection();
   },
@@ -75,6 +71,9 @@ Page({
    * 获取是否关注信息
    */
   getCollection() {
+    if (!wx.getStorageSync('token')) {
+      return
+    }
     wx.showLoading();
     var params = {
       url: "/p/user/collection/isCollection",
@@ -148,78 +147,7 @@ Page({
     };
     http.request(params);
   },
-  getProdCommData() {
-    http.request({
-      url: "/prodComm/prodCommData",
-      method: "GET",
-      data: {
-        prodId: this.data.prodId,
-      },
-      callBack: (res) => {
-        this.setData({
-          prodCommData: res
-        })
-      }
-    })
-  },
-  // 获取部分评论
-  getLittleProdComm() {
-    if (this.data.prodCommPage.records.length) {
-      return;
-    }
-    this.getProdCommPage();
-  },
-  getMoreCommPage(e) {
-    this.getProdCommPage();
-  },
-  // 获取分页获取评论
-  getProdCommPage(e) {
-    if (e) {
-      if (e.currentTarget.dataset.evaluate === this.data.evaluate) {
-        return;
-      }
-      this.setData({
-        prodCommPage: {
-          current: 0,
-          pages: 0,
-          records: []
-        },
-        evaluate: e.currentTarget.dataset.evaluate
-      })
-    }
-    http.request({
-      url: "/prodComm/prodCommPageByProd",
-      method: "GET",
-      data: {
-        prodId: this.data.prodId,
-        size: 10,
-        current: this.data.prodCommPage.current + 1,
-        evaluate: this.data.evaluate
-      },
-      callBack: (res) => {
-        res.records.forEach(item => {
-          if (item.pics) {
-            item.pics = item.pics.split(',')
-          }
-        })
-        let records = this.data.prodCommPage.records
-        records = records.concat(res.records)
-        this.setData({
-          prodCommPage: {
-            current: res.current,
-            pages: res.pages,
-            records: records
-          }
-        })
-        // 如果商品详情中没有评论的数据，截取两条到商品详情页商品详情
-        if (!this.data.littleCommPage.length) {
-          this.setData({
-            littleCommPage: records.slice(0, 2)
-          })
-        }
-      }
-    })
-  },
+
   getCouponList() {
     http.request({
       url: "/coupon/listByProdId",
