@@ -1,14 +1,15 @@
 ![输入图片说明](https://images.gitee.com/uploads/images/2019/0711/174845_6db7724e_5094767.png "商城.png")
 
 
-## 后台使用springboot3开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：[https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j) 
+## 后台使用springboot4开发超过百万开发者检测（商业版已经部署超过1000+应用），15k star java后台：[https://gitee.com/gz-yami/mall4j](https://gitee.com/gz-yami/mall4j) 
 
 
  **本项目是一个原生微信小程序的商城项目，而uniapp除了小程序还可发布到APP和H5。另外uniapp用vue3语法进行开发更加通用，所以更推荐使用uniapp打包成微信小程序。uniapp的项目见：[https://gitee.com/gz-yami/mall4uni](https://gitee.com/gz-yami/mall4uni) 。当然本项目也是可以运行的** 
 
 Mall4j开源商城，一个基于spring boot、spring oauth2.0、mybatis、redis的轻量级、前后端分离、防范xss攻击、拥有分布式锁，为生产环境多实例完全准备，数据库为b2b2c设计，拥有完整sku和下单流程的开源商城
 
-## Spring以及VUE官方宣布，SpringBoot2与Vue2已在2023年底停止维护。新项目建议使用SpringBoot3+Vue3的组合，本商城已完成升级!!!
+## Spring官方宣布，SpringBoot3于2026年6月底停止维护。新项目建议使用SpringBoot4，本商城已完成升级!!!
+## VUE官方宣布，Vue2已在2023年底停止维护。新项目建议使用Vue3，本商城已完成升级!!!
 
 ## 前言
 
